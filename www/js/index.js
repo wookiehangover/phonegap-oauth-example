@@ -9,6 +9,7 @@ var app = {
         _this.authenticate('instagram')
           .then(function(data){
             console.log(data);
+            alert(data.id);
           }, function(err){
             console.log(err);
           });

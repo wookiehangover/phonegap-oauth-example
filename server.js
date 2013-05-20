@@ -15,6 +15,10 @@ app.configure(function() {
   app.use(app.router);
 });
 
+if( !process.env.instagram_id || !process.env.instagram_secret ){
+  throw new Error('You must supply credentials as environment variables');
+}
+
 authom.createServer({
   service: 'instagram',
   id: process.env.instagram_id,
