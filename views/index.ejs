@@ -6,10 +6,14 @@
   </body>
   <% if( user ){ %>
     <script>
+      // Expose the user object to the window. This could be anything that
+      // gives the phonegap app access to session infromation.
       window.user = <%- JSON.stringify(user, '', '  ') %>;
+
+      // Setup a listener for the postMessage event
       window.addEventListener('message', function(event) {
         if( window.user ){
-          event.source.postMessage(window.user, '*');
+          event.source.postMessage(window.user, event.data);
         }
       }, false);
     </script>
