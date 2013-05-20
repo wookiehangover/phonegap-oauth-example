@@ -1,0 +1,17 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <a href="/auth/instagram">login</a>
+  </body>
+  <% if( user ){ %>
+    <script>
+      window.user = <%- JSON.stringify(user, '', '  ') %>;
+      window.addEventListener('message', function(event) {
+        if( window.user ){
+          event.source.postMessage(window.user, '*');
+        }
+      }, false);
+    </script>
+  <% } %>
+</html>
