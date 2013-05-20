@@ -3,9 +3,12 @@
 This is a simple example of how to authenticate with an oauth service
 via your own server from a Phonegap application.
 
-tl;dr - take a look at `www/js/index.js` and `views/index.ejs` to see
-the gist of what's going on here--passing back user information from an
-auth server to a phonegap client using HTML5 postMessage.
+tl;dr - take a look at
+[`www/js/index.js`](https://github.com/wookiehangover/phonegap-oauth-example/blob/master/www/js/index.js#L31-L87)
+and
+[`views/index.ejs`](https://github.com/wookiehangover/phonegap-oauth-example/blob/master/views/index.ejs#L8-L19)
+to see the gist of what's going on here--passing back user information
+from an auth server to a phonegap client using HTML5 postMessage.
 
 ## Setup
 
@@ -52,7 +55,7 @@ and platform-specific.)
 Keep in mind that this is exposing logged in user information with
 JavaScript, so at a minimum you should think about keeping the iframe
 url relatively obscure, explicitly filtering out non-file protocol
-iframe loads or use a querystring parameter that would be known only to
+iframe loads or using a querystring parameter that would be known only to
 the client and the server and filter based on that (hell, you could even
 implement oauth 2 on the signing server too.)
 
