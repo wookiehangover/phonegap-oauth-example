@@ -18,14 +18,14 @@ as [Instagram](http://instagram.com/developer/clients/register/).
 
 Run the node server with
 
-  instagram_id=xxxx instagram_secret=xxxx node server
+    instagram_id=xxxx instagram_secret=xxxx node server
 
 Where `instagram_id` and `instagram_secret` are oauth credentials. Once
 the server's running, build and run a client through the simulator.
 
-  cordova platform add ios
-  cordova build ios
-  cordova simulate ios
+    cordova platform add ios
+    cordova build ios
+    cordova simulate ios
 
 Or open the Xcode project that's located in
 `platforms/ios/HelloCordova.xcodeproj` if you're interested in seeing
